@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Notes API Output</title>
+</head>
+<body>
+  <h1>Notes API</h1>
+  <p>This page shows output from backend</p>
+
+  <button onclick="loadNotes()">Load Notes</button>
+
+  <ul id="notes"></ul>
+
+  <script>
+    function loadNotes() {
+      fetch("/api/notes")
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById("notes");
+          list.innerHTML = "";
+
+          data.forEach(note => {
+            const li = document.createElement("li");
+            li.innerText = note.title + " : " + note.content;
+            list.appendChild(li);
+          });
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+  </script>
+</body>
+</html>
