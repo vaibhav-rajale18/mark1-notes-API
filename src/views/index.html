@@ -2,34 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Notes API Output</title>
+  <title>Notes API</title>
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
+
   <h1>Notes API</h1>
   <p>This page shows output from backend</p>
+
+  <h3>Create Note</h3>
+
+  <input type="text" id="title" placeholder="Note title" />
+  <br /><br />
+
+  <textarea id="content" placeholder="Note content" rows="4"></textarea>
+  <br /><br />
+
+  <button onclick="createNote()">Create Note</button>
+
+  <hr />
 
   <button onclick="loadNotes()">Load Notes</button>
 
   <ul id="notes"></ul>
 
-  <script>
-    function loadNotes() {
-      fetch("/api/notes")
-        .then(res => res.json())
-        .then(data => {
-          const list = document.getElementById("notes");
-          list.innerHTML = "";
-
-          data.forEach(note => {
-            const li = document.createElement("li");
-            li.innerText = note.title + " : " + note.content;
-            list.appendChild(li);
-          });
-        })
-        .catch(err => {
-          console.error(err);
-        });
-    }
-  </script>
+  <script src="/js/application.js"></script>
 </body>
 </html>
