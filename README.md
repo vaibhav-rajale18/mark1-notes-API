@@ -126,4 +126,4 @@ Aspiring Backend / Full Stack Developer
 
 ## ⭐ Final Note
 
-This project is part of my learning journey to master backend development and build production-ready applications.
+This project is part of my learning journey to master backend development and build production-ready applications and learn Full Mern Stack development.
