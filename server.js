@@ -10,3 +10,7 @@ connectDB();
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+// to run this on browser use this url 
+// http://localhost:3000
