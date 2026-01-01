@@ -83,15 +83,34 @@ PORT=3000
 
 ---
 
-▶️ How to Run Locally
-```git clone https://github.com/vaibhav-rajale18/mark1-notes-API.git
+## ▶️ How to Run Locally
+
+### 1️⃣ Clone the repository
+```bash
 cd mark1-notes-API
 npm install
+```
+## 2️⃣ Setup environment variables
+Create a ```.env``` file in the project root
+
+Refer to ```.env.example``` for required variables
+
+Example:
+
+env
+Copy code
+```
+PORT=3000
+MONGO_URI=your_mongodb_connection_string_here
+```
+## 3️⃣ Start the server
+```bash
 npm start
+```
+Then open in your browser:
 
-
-Then open:
-
+arduino
+```Copy code
 http://localhost:3000
 ```
 
