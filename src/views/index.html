@@ -3,29 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <title>Notes API</title>
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
-  <h1>Notes API</h1>
-  <p>Hey, Let's create some notes!</p>
+  <!-- ================= APP HEADER ================= -->
+  <header class="app-header">
+    <div class="header-content">
+      <h1>Notes API</h1>
+      <p>Hey, Let's create some notes!</p>
+    </div>
+  </header>
+  <!-- =============== END HEADER ================== -->
 
-  <h3>Create Note</h3>
 
-  <input type="text" id="title" placeholder="Note title" />
-  <br /><br />
+  <!-- ================= MAIN APP CONTAINER ================= -->
+  <div class="app-container">
 
-  <textarea id="content" placeholder="Note content" rows="4"></textarea>
-  <br /><br />
+    <!-- -------- LEFT PANEL : CREATE NOTE -------- -->
+    <div class="left-panel">
+      <h3>Write your note here !</h3>
 
-  <button onclick="createNote()">Create Note</button>
+      <!-- Note title input -->
+      <input type="text" id="title" placeholder="Note title" />
 
-  <hr />
+      <br /><br />
 
-  <button onclick="loadNotes()">Load Notes</button>
+      <!-- Note content textarea -->
+      <textarea id="content" placeholder="Note content" rows="4"></textarea>
 
-  <ul id="notes"></ul>
+      <br /><br />
 
+      <!-- Create note button -->
+      <button onclick="createNote()">Create Note</button>
+    </div>
+    <!-- ------ END LEFT PANEL ------ -->
+
+
+    <!-- -------- RIGHT PANEL : VIEW NOTES -------- -->
+    <div class="right-panel">
+
+      <!-- Load all notes button -->
+      <button onclick="loadNotes()">Load Notes</button>
+
+      <!-- Scrollable notes container -->
+      <div class="notes-wrapper">
+        <ul id="notes"></ul>
+      </div>
+    </div>
+    <!-- ------ END RIGHT PANEL ------ -->
+
+  </div>
+  <!-- =============== END APP CONTAINER ================= -->
+
+
+  <!-- Main application script -->
   <script src="/js/application.js"></script>
+
 </body>
 </html>
